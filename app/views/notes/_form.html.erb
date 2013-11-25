@@ -1,0 +1,10 @@
+<%= form_for Note.id, remote: true do |f| %>
+      <%= f.text_field :content, placeholder: @note.content size: 50 %>
+    <% end %>
+<div>
+    <%= link_to edit_note_url(note), remote: true  do %>
+      <i class="icon-edit"></i>
+    <% end %>
+
+    <%= link_to '<i class="icon-trash"></i>'.html_safe, note_url(note), method: 'delete', remote: true %>
+  </div>
