@@ -1,7 +1,7 @@
 <li id="note_<%= note.id %>">
   <%= note.content %>
   <div>
-    <%= link_to edit_note_url(note) do %>
+    <%= link_to edit_note_url(note), remote: true  do %>
       <i class="icon-edit"></i>
     <% end %>
 

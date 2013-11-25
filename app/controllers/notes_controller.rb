@@ -33,6 +33,11 @@ class NotesController < ApplicationController
 
   def edit
     @note = Note.find_by(id: params[:id])
+    respond_to do |format|
+      format.html do
+      end
+      format.js
+    end
   end
 
   def update
